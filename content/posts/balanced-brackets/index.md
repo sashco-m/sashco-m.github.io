@@ -6,7 +6,7 @@ draft: true
 
 This is the first in a series of posts on technical questions I've been asked during interviews for software engineering internships. I've done dozens as part of UWaterloo's co-op system, and I'll be picking the most interesting to share with tips on solving them!
 
-<!-- more -->
+<!--more-->
 
 ## Problem
 

@@ -7,6 +7,53 @@ Console is a minimal, responsive and light theme for Hugo inspired by Linux cons
 </p>
 <br/>
 
+{{ with .Site.GetPage "/work" }}
+{{ range first 1 (sort .Data.Pages ".Params.endDate" "desc" (where .Pages ".Params.private" "!=" true))}}
+{{ if eq true .Params.current}}
+<h1>Currently Working At</h1>
+
+<div class="posts-list">
+        <div class="post">
+            <p>
+                <div class="date">
+                    {{ dateFormat "Jan. 2, 2006" .Params.startDate }}
+                    to <br>
+                    {{ dateFormat "Jan. 2, 2006" .Params.endDate }}
+                </div>    
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>    
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+<h1>Latest Projects</h1>
+
+<div class="posts-list">
+{{ with .Site.GetPage "/projects" }}
+    {{ range first 3 (sort .Data.Pages ".Params.startDate" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="post">
+            <p>
+                <div class="date">
+                    {{ dateFormat "Jan. 2, 2006" .Params.startDate }}
+                    to <br>
+                    {{ if not (eq .Params.endDate "nil") }}
+                        {{ dateFormat "Jan. 2, 2006" .Params.endDate }}
+                    {{ else }}
+                    current
+                    {{ end }}
+                </div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>    
+    {{ end }}
+{{ end }}
+</div>
+
 <h1>Latest posts</h1>
 
 <div class="posts-list">

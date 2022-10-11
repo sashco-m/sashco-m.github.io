@@ -32,19 +32,29 @@
 
 :root {
     --global-font-size: 16px;
-    --global-font-color: #444;
+    --global-font-color: #e8e9ed;
     --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --global-line-height: 1.6em;
     --page-width: 70em;
     --display-h1-decoration: 1;
-    --code-bg-color: #fff;
+    --background-color: #222225;
+    --font-color: #e8e9ed;
+    --invert-font-color: #222225;
+    --secondary-color: #a3abba;
+    --tertiary-color: #a3abba;
+    --primary-color: #62c4ff;
+    --error-color: #ff3c74;
+    --progress-bar-background: #3f3f44;
+    --progress-bar-fill: #62c4ff;
+    --code-bg-color: #222225;
+    --input-style: solid;
 }
 
 @media only screen and (max-width: 850px) {
     :root {
         --global-font-size: 14px;
-        --global-font-color: #444;
+        --global-font-color: #e8e9ed;
         --global-line-height: 1.6em;
         --page-width: 70em;
     }
@@ -58,7 +68,7 @@
 }
 
 .box-masonry .box-masonry-image {
-    background: #fff;
+    background: #222225;
 }
 
 .box-masonry,
@@ -73,7 +83,7 @@
 body {
     font-family: var(--font-stack);
     font-size: var(--global-font-size);
-    background-color: #fff;
+    background-color: #222225;
     margin-bottom: 75px;
 }
 
@@ -195,7 +205,7 @@ figure {
 
 .posts-list {
     position: relative;
-    padding-left: 130px;
+    padding-left: 140px;
     top: 0;
 }
 

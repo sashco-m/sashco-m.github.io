@@ -4,13 +4,34 @@
     
         
         <url>
-            <loc>http://example.org/categories/</loc>
+            <loc>http://example.org/photos/arizona-us/</loc>
+            <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://example.org/photos/</loc>
+            <lastmod>2020-01-21T00:00:00+00:00</lastmod>
         </url>
         
     
         
         <url>
             <loc>http://example.org/</loc>
+            <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://example.org/categories/</loc>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://example.org/posts/</loc>
         </url>
         
     

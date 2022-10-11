@@ -39,7 +39,6 @@
     --page-width: 70em;
     --display-h1-decoration: 1;
     --background-color: #222225;
-    --page-width: 60em;
     --font-color: #e8e9ed;
     --invert-font-color: #222225;
     --secondary-color: #a3abba;
@@ -206,7 +205,7 @@ figure {
 
 .posts-list {
     position: relative;
-    padding-left: 130px;
+    padding-left: 140px;
     top: 0;
 }
 
