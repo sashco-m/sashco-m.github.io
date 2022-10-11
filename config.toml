@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'sashco'
 theme = "hugo-theme-console"
 enableEmoji = true
+pygmentsCodefences = true 
+pygmentsStyle = "dracula"
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
