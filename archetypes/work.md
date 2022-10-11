@@ -1,8 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-startDate: {{ .Date }}
-endDate: {{ .Date }}
+startDate: nil
+endDate: nil
 current: false
 draft: true
 ---
