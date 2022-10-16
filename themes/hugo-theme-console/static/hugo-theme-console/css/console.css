@@ -126,6 +126,10 @@ h1 {
     margin-top: 5px;
 }
 
+pre code {
+    overflow: auto;
+}
+
 .content-column-content .command {
     color: #aaa;
 }
