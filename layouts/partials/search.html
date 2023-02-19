@@ -1,0 +1,36 @@
+
+<form id="search" class="search" role="search">
+    <label for="search-input">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon search-icon"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+    </label>
+    <input placeholder="Search for post" type="search" id="search-input" class="search-input">
+    <input class="clear" type="reset">
+</form>
+
+<!-- TODO: alter search-results to match the posts list-->
+<!-- Idea: show tags below each article.
+  When clicking a tag, it has the same effect as searching for a tag -->
+<!-- How do we show all tags? 
+  1. separate 'categories' page
+  2. show all tags at the top of posts? Maybe along the sidebar?
+      'all tags' down LHS with a list of all tags. Clicking has same effect as searching!!!-->
+<!-- TODO fix mobile searchbar styling-->
+
+<template id="search-result" hidden>
+  <div class="post">
+      <p>
+          <div class="date"></div>
+          <h1><a class="summary-title-link"></a></h1>
+          <summary class="summary"></summary>
+      </p>
+  </div>
+</template>
+
+
+<div class="main-inner posts-list"></div>
+
+<!-- prevent focus loss on clear -->
+<!-- TODO prevent focus loss on tab change -->
+<script>
+  document.querySelector(".clear").addEventListener("mousedown", e => e.preventDefault())
+</script>

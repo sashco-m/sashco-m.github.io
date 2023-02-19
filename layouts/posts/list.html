@@ -1,0 +1,28 @@
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<br/>
+{{ .Content }}
+
+<!-- search functionality -->
+{{ partial "search.html" }}
+
+<!-- TODO: implement some fake pagination -->
+
+<div id="default-list" class="posts-list">
+{{ range sort .Data.Pages "Date" "desc" }}
+    {{ if not .Params.private }}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>    
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+
+<!-- include script for lunr-search -->
+{{ partial "script.html" . }}
+
+{{ end }}

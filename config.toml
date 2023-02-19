@@ -43,3 +43,12 @@ name = "sashco-hugo"
 # S3; see https://gocloud.dev/howto/blob/#s3
 # For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
 URL = "s3://sashco-hugo-bucket?region=us-east-1"
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    baseName = "search"
+    mediaType = "application/json"
+
+[outputs]
+  home = ["HTML","SearchIndex"]
+  page = ["HTML"]
