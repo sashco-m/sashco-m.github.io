@@ -136,7 +136,6 @@ window.addEventListener("DOMContentLoaded", function(event)
       // hacky conversion from golang date to js date
       let parts = doc.date.split(" ")
       let date = new Date(`${parts[0]}T${parts[1]}${parts[2]}`)
-      console.log(date)
       var options = {year: 'numeric', month: 'short', day: 'numeric' };
       element.querySelector(".date").textContent = date.toLocaleDateString('en-us', options);
       // append the completed element

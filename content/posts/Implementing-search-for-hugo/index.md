@@ -4,14 +4,14 @@ date: 2023-02-19T14:04:58-05:00
 draft: true
 ---
 
-Hugo's [search documentation](https://gohugo.io/tools/search/) is not very useful if you want to get simple search up and running quickly. What I've done is compiled instructions from a few sources, with extra explanation that may be useful for Hugo noobs like myself. Search is cool, however it's pretty sad with only one article... but I can bump that up to 2 by writing about how I did it!
+Hugo's [search documentation](https://gohugo.io/tools/search/) is not very useful if you want to get simple search up and running quickly. What I've done is compiled instructions from a few sources, with extra explanation that may be useful for Hugo noobs like myself. 
 
 <!--more-->
 
 This article is adapted from [palant.info](https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/)'s article on adding search with [lunr.js](https://lunrjs.com/). Shout out to the author and his super customizable theme [memE](https://github.com/reuixiy/hugo-theme-meme) that includes search out of the box!
 
 # Install
-To 'install', we're going to simply include the file with a script tags. I created a new file at 'layouts/partials/script.html` to contain this and any future scripts I would need. We can then include this partial in your baseof.html layout.
+To 'install', we're going to simply include lunr.js with script tags. I created a new file at 'layouts/partials/script.html` to contain this and any future scripts I would need. Include this partial in your baseof.html layout.
 
 layouts/partials/script.html
 ```HTML
@@ -28,7 +28,7 @@ layouts/_default/baseof.html
 We will be adding lunr-search.js to your static folder later.
 
 # Search Index
-The first thing Lunr requires is an index of your content. We will leverage Hugo to generate this for us. Just like how HTML is an output type for some content, we can tell Hugo that JSON is another output type for some of our content. We can do this by adding a [custom output format](https://gohugo.io/templates/output-formats/) to our config, and then telling Hugo where it will be used. Add these lines to your config.toml:
+The first thing Lunr requires is an index of your content. We will leverage Hugo to generate this for us. Just like how some of our content is HTML, we can tell Hugo that we also produce JSON. We can do this by adding a [custom output format](https://gohugo.io/templates/output-formats/) to our config, and then telling Hugo where it will be used. Add these lines to your config.toml:
 ```toml
 [outputFormats]
   [outputFormats.SearchIndex]
@@ -39,12 +39,12 @@ The first thing Lunr requires is an index of your content. We will leverage Hugo
   home = ["HTML","SearchIndex"]
   page = ["HTML"]
 ```
-Here we define the custom output format 'SearchIndex', which is used for all pages (home). Now, just like we create HTML templates in 'layouts', we can create a JSON template. We have to follow Hugo's naming convention for custom output formates:
+Here we define the custom output format 'SearchIndex', which is used for all pages (home). Now, just like how we create HTML templates in 'layouts', we can create a JSON template too. We have to follow Hugo's naming convention for templates with custom output formats:
 ```
 {kind}.{output_format}.{extension}
 ```
 This is sort-of explained by Hugo's [lookup rules](https://gohugo.io/templates/lookup-order/), but not very well in my opinion.
-Anyway, according to the docs we can choose home/index, our output format is 'searchindex' and the extension is '.json'. So we create the file:
+Anyway, according to the docs the kind can be 'home' or 'index', our output format is 'searchindex' and the extension is '.json'. So we create the file:
 
 layouts/index.searchindex.json
 ```json
@@ -61,13 +61,13 @@ layouts/index.searchindex.json
 ]
 ```
 
-We are looping over all the 'regular' pages (that is single content, and not lists of content to avoid duplicates) and then further filtering it to only posts. We then build a dictionary with the keys: uri, title, content, summary, date, and categories. You can customize this to contain anything you would like to search for by adding/removing entries. 
+We are looping over all the 'regular' pages (that is single content, and not lists of content to avoid duplicates), filtered to only posts. We then build a dictionary with the keys: uri, title, content, summary, date, and categories. You can customize this to contain anything you would like to search for by adding/removing entries. 
 We can confirm the search index exists after the page rebuild by checking 'localhost:1313/search.json'.
 
 # Searching and displaying results
-Hugo already nicely sorts my posts in ascending date and displays them on the 'posts' page for me. My plan is to include a search bar that pretends to filter this list by first hiding it and then dynamically injecting its search result list into the DOM. Then, if the search bar is reset, the search results will be removed and the original list unhidden. This is hacky, but we are sort of breaking the rules of a static site by including search in the first place.
+Hugo already nicely sorts my posts by date and displays them on the 'posts' page for me. My plan is to include a search bar that pretends to filter this list by first hiding it and then dynamically injecting its search result list into the DOM. Then, if the search bar is reset, the search results will be removed and the original list unhidden. 
 
-The search form and results are pretty simple. We have a search bar with an input and reset button. We have a hidden 'search-result' template, that will be cloned by the search function to display results. We also have a 'main-inner' div where the results are cloned under. Finally, I've added a hacky little script at the bottom to prevent the form from losing focus when the reset button is clicked. This is probably bad for a11y, but I like it.
+The search form and results are pretty simple. We have a search bar with an input and reset button. We have a hidden 'search-result' template, that will be cloned by the search function to display results. We also have a 'main-inner' div where the results are cloned under. Finally, I've added a hacky little script at the bottom to prevent the form from losing focus when the reset button is clicked. 
 
 layouts/partials/search.html
 ```HTML
@@ -98,7 +98,7 @@ layouts/partials/search.html
 </script>
 ```
 
-Here is the posts list page. Also simple, we can see where the search functionality is added. 'default-list' is hidden by our search function and revealed on reset.
+Here is the posts list page. 'default-list' is hidden by our search function and revealed on reset.
 
 layouts/posts/list.html
 ```HTML
@@ -179,7 +179,7 @@ static/css/search.css
 ```
 
 # Search Function
-Now onto the most important part, the search itself. We add a listener to the form which begins the search on submit. This is where we begin the animation and hide the existing posts list. We then perform the search with lunr, creating the index first if it does not exist. Inside search, we clone the hidden element, set the fields to what we found in the result, and append it to the target. We also add a listener for reset, which clears the results, and unhides the original list. This code will need to be modified for your use case, but thankfully it isn't too confusing.
+Now onto the most important part, the search itself. We add a listener to the form which begins the search on submit and hides the existing posts list. We then perform the search with lunr, creating the index first if it does not exist. Inside 'search', we clone the hidden element, set the fields to what we found in the result, and append it to the target. We also add a listener for reset, which clears the results, and unhides the original list. This code will need to be modified for your use case, but thankfully it isn't too confusing.
 
 static/js/lunr-search.js
 
@@ -317,7 +317,6 @@ window.addEventListener("DOMContentLoaded", function(event)
       // hacky conversion from golang date to js date
       let parts = doc.date.split(" ")
       let date = new Date(`${parts[0]}T${parts[1]}${parts[2]}`)
-      console.log(date)
       var options = {year: 'numeric', month: 'short', day: 'numeric' };
       element.querySelector(".date").textContent = date.toLocaleDateString('en-us', options);
       // append the completed element
