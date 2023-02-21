@@ -5,7 +5,7 @@
         {{- $entry = merge $entry (dict "content" ($page.Plain | htmlUnescape)) -}}
         {{- $entry = merge $entry (dict "summary" ($page.Summary | plainify |  htmlUnescape)) -}}
         {{- $entry = merge $entry (dict "date" ($page.PublishDate | htmlUnescape)) -}}
-        {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}}
+        {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
         {{- $entry | jsonify -}}
     {{- end -}}
 ]

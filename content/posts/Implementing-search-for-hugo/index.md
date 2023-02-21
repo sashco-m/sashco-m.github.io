@@ -1,6 +1,7 @@
 ---
 title: "Implementing Search for Hugo with Lunr"
 date: 2023-02-19T14:04:58-05:00
+tags: ["hugo", "project", "software"]
 draft: true
 ---
 

@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", function(event)
 
   form.addEventListener("submit", function(event)
   {
+    console.log('test')
     event.preventDefault();
 
     var term = input.value.trim();
@@ -85,9 +86,9 @@ window.addEventListener("DOMContentLoaded", function(event)
         // If you added more searchable fields to the search index, list them here.
         this.field("title");
         this.field("content");
-        this.field("categories");
         this.field("summary");
         this.field("date");
+        this.field("tags");
 
         for (var doc of request.response)
         {

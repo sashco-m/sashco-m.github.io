@@ -1,6 +1,7 @@
 ---
 title: "Tech Interview Question: Balanced Brackets"
 date: 2022-10-10T10:44:22-04:00
+tags: ["interview", "leetcode", "software"]
 draft: true
 ---
 

@@ -1,0 +1,12 @@
+.tags {
+    margin-top: -1em;
+}
+
+.tag{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid;
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+/* TODO map text to different colours? */

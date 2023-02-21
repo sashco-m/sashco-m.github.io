@@ -17,6 +17,11 @@
                 <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
                 {{ .Summary }}
             </p>
+            <div class="tags">
+                {{ range .Params.tags }}
+                    <a class="tag" onClick="searchByTag()"> {{ . }} </a>
+               {{ end }}
+            </div>
         </div>
     {{ end }}
 {{ end }}
@@ -24,5 +29,22 @@
 
 <!-- include script for lunr-search -->
 {{ partial "script.html" . }}
+
+<!-- integrate tags with search -->
+<script>
+    let form = document.getElementById("search");
+    let input = document.getElementById("search-input");
+
+    searchByTag = () => {
+        // set the searchbar to the tag
+        input.value = event.target.textContent.trim()
+        // create submit event (initiate search)
+        let submitEvent = new Event('submit', {
+            'bubbles'    : true, // Whether the event will bubble up through the DOM or not
+            'cancelable' : true  // Whether the event may be canceled or not
+        })
+        form.dispatchEvent(submitEvent)
+    }
+</script>
 
 {{ end }}
