@@ -71,7 +71,6 @@ window.addEventListener("DOMContentLoaded", function(event)
     request.responseType = "json";
     request.addEventListener("load", function(event)
     {
-      lookup = {};
       index = lunr(function()
       {
         // Uncomment the following line and replace de by the right language
@@ -91,7 +90,6 @@ window.addEventListener("DOMContentLoaded", function(event)
         for (var doc of request.response)
         {
           this.add(doc);
-          lookup[doc.uri] = doc;
         }
       });
 
@@ -146,7 +144,6 @@ window.addEventListener("DOMContentLoaded", function(event)
       if(!tagSet.has(tag.textContent)){
         tag.classList.add('hidden')
       } else {
-        console.log('huh')
         tag.classList.remove('hidden')
       }
     })
