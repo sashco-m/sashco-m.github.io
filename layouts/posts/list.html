@@ -3,30 +3,45 @@
 <br/>
 {{ .Content }}
 
-<!-- search functionality -->
 {{ partial "search.html" }}
 
-<!-- TODO: implement some fake pagination -->
-
-<div id="default-list" class="posts-list">
-{{ range sort .Data.Pages "Date" "desc" }}
-    {{ if not .Params.private }}
-        <div class="post">
-            <p>
-                <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>    
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-            <div class="tags">
-                {{ range .Params.tags }}
-                    <a class="tag" onClick="searchByTag()"> {{ . }} </a>
-               {{ end }}
-            </div>
+<div id="result-container">
+    <div id="main-tags" class="tag-sidebar">
+        <h2>Tags:</h2>
+        <div id="default-tags">
+            <!-- loop through all pages, find unique tags -->
+            {{ $taglist := slice }} 
+            {{ range .Data.Pages }}
+                {{ $taglist = uniq ($taglist | append .Params.tags) }}
+            {{ end }}
+            {{ range $taglist }}
+            <a class="tag" onClick="searchByTag()">{{ . }}</a>
+            {{ end }}
         </div>
-    {{ end }}
-{{ end }}
-</div>
+    </div>
+    <div class="main-list">
+        <!-- TODO: implement some fake pagination -->
 
+        <div id="default-list" class="posts-list">
+        {{ range sort .Data.Pages "Date" "desc" }}
+            {{ if not .Params.private }}
+                <div class="post">
+                    <p>
+                        <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>    
+                        <h1><a class="post-ref" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                        {{ .Summary }}
+                    </p>
+                    <div class="tags">
+                        {{ range .Params.tags }}
+                            <a class="tag" onClick="searchByTag()"> {{ . }} </a>
+                    {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
+        </div>
+    </div>
+</div>
 <!-- include script for lunr-search -->
 {{ partial "script.html" . }}
 

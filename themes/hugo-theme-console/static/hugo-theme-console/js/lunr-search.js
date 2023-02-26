@@ -8,13 +8,11 @@ window.addEventListener("DOMContentLoaded", function(event)
   var form = document.getElementById("search");
   var input = document.getElementById("search-input");
   var posts = document.getElementById("default-list");
-
-  // The element where search results should be displayed, adjust as needed.
-  var target = document.querySelector(".main-inner");
+  let tags = document.getElementById("default-tags")
+  let title = document.getElementById('search-results-title')
 
   form.addEventListener("submit", function(event)
   {
-    console.log('test')
     event.preventDefault();
 
     var term = input.value.trim();
@@ -25,20 +23,20 @@ window.addEventListener("DOMContentLoaded", function(event)
   }, false);
 
   form.addEventListener("reset", function(event){
-    // remove search results
-    clear()
     // unhide posts
-    posts.removeAttribute('hidden')
+    Array.from(posts.children).forEach((post)=>{post.removeAttribute('hidden')})
+    // unhide tags
+    Array.from(tags.children).forEach((tag)=>{tag.classList.remove('hidden')})
     // revert title
     document.title = 'sashco/posts/'; 
+    // hide result title
+    title.classList.add('hidden')
   })
 
   function startSearch(term)
   {
     // Start icon animation.
     form.setAttribute("data-running", "true");
-    // Set date-ordered list to hidden
-    posts.setAttribute("hidden", "true");
 
     if (index)
     {
@@ -108,49 +106,54 @@ window.addEventListener("DOMContentLoaded", function(event)
   {
     var results = index.search(term);
 
-    // clear previous results
-    clear()    
-
-    var title = document.createElement("h1");
-    title.id = "search-results";
-    title.className = "list-title";
-
     if (results.length == 0)
       title.textContent = `No results found for “${term}”`;
     else if (results.length == 1)
       title.textContent = `Found one result for “${term}”`;
     else
       title.textContent = `Found ${results.length} results for “${term}”`;
-    target.appendChild(title);
+
+    //unhide title 
+    title.classList.remove('hidden');
+    // set page title
     document.title = title.textContent;
 
-    var template = document.getElementById("search-result");
-    for (var result of results)
-    {
-      var doc = lookup[result.ref];
+    // POSSIBLE IMPROVEMENT: show match score beside article. that would be cool
+    // also the 'results' array is ordered by match strength. we could sort the posts to match this
+    // this might be hard though since we want to keep the original date ordering
 
-      // Fill out search result template, adjust as needed.
-      var element = template.content.cloneNode(true);
-      element.querySelector(".summary-title-link").href = doc.uri;
-      element.querySelector(".summary-title-link").textContent = doc.title;
-      element.querySelector(".summary").textContent = doc.summary;
-      // hacky conversion from golang date to js date
-      let parts = doc.date.split(" ")
-      let date = new Date(`${parts[0]}T${parts[1]}${parts[2]}`)
-      var options = {year: 'numeric', month: 'short', day: 'numeric' };
-      element.querySelector(".date").textContent = date.toLocaleDateString('en-us', options);
-      // append the completed element
-      target.appendChild(element);
-    }
+    // ordered by match strength
+    const refs = results.map((res)=>{return res.ref})
+    // build the tags list when iterating over the posts
+    let tagSet = new Set() 
+
+    Array.from(posts.children).forEach((post)=>{
+      // exact path for finding the ref. ugly. needs to change when html structure changes
+      if(!refs.includes(post.children[2].children[0].pathname)){
+        // hide unmatched
+        post.setAttribute('hidden','true')
+      } else {
+        // show matched (in case some are hidden from previous search)
+        post.removeAttribute('hidden')
+        // add tags
+        Array.from(post.children[5].children).forEach((tag)=>{
+          tagSet.add(tag.textContent.trim())
+        })
+      }
+    })
+    // have our tagset
+    Array.from(tags.children).forEach((tag)=>{
+      if(!tagSet.has(tag.textContent)){
+        tag.classList.add('hidden')
+      } else {
+        console.log('huh')
+        tag.classList.remove('hidden')
+      }
+    })
+
     title.scrollIntoView(true);
 
     searchDone();
-  }
-
-  // clear the search results
-  function clear(){
-    while (target.firstChild)
-      target.removeChild(target.firstChild);
   }
 
 }, false);

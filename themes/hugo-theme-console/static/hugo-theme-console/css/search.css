@@ -18,6 +18,11 @@
   cursor: pointer;
   width: 1.5em;
   height: 1.5em;
+}
+
+.search-label {
+  width: 1.5em;
+  height: 1.5em;
   margin-right: 0.5em;
 }
 
@@ -44,12 +49,17 @@
   cursor: pointer;
 }
 
-.posts-list .list-title {
-  left: -140px;
+.hidden {
+  display: none !important;
 }
 
+.list-title {
+  left:140px;
+}
+ /* TODO fix searchbar width on mobile */
+
 @media only screen and (max-width: 850px) {
-  .posts-list .list-title {
+  .list-title {
     left:0px;
   }
 }
