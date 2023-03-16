@@ -19,14 +19,6 @@ pygmentsStyle = "dracula"
   url = "about/"
 
   [[params.navlinks]]
-  name = "work/"
-  url = "work/"
-
-  [[params.navlinks]]
-  name = "projects/"
-  url = "projects/"
-  
-  [[params.navlinks]]
   name = "posts/"
   url = "posts/"
   
