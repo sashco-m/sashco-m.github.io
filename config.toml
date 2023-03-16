@@ -13,6 +13,10 @@ pygmentsStyle = "dracula"
   # Set the animation style -- https://animate.style/
   # To disable animations, please remove or comment animationStyle parameter
   animateStyle = "animated zoomIn fast" 
+  
+  [[params.navlinks]]
+  name = "resume/"
+  url = "https://sashcoresumebucket.s3.us-east-2.amazonaws.com/mistelbacher_resume.pdf"
 
   [[params.navlinks]]
   name = "about/"
