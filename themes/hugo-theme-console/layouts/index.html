@@ -79,7 +79,7 @@ Hello! I'm Sashco, and this site is in progress! <a href="about/">(more)</a>
         <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
-            {{ $thumb := .Resize "400x" }}
+            {{ $thumb := .Fit "400x400" }}
             <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
         {{end}}
         </a>
