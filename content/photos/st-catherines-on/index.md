@@ -1,7 +1,6 @@
 ---
 title: "Decew Falls, St Catherines"
 date: 2023-03-14T23:38:28-04:00
-draft: true
 type: "gallery"
 image: "st-catherines-on.jpg"
 ---

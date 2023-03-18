@@ -1,7 +1,6 @@
 ---
 title: "About"
 date: 2022-06-05T21:14:45-04:00
-draft: true
 ---
 
 [Hey](https://zombo.com/)! I'm Sashco. With my new revamped website I'm going to be documenting my journey in tech.

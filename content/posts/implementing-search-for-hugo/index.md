@@ -2,7 +2,6 @@
 title: "Implementing Search for Hugo with Lunr"
 date: 2023-02-19T14:04:58-05:00
 tags: ["hugo", "project", "software"]
-draft: true
 ---
 
 Hugo's [search documentation](https://gohugo.io/tools/search/) is not very useful if you want to get simple search up and running quickly. What I've done is compiled instructions from a few sources, with extra explanation that may be useful for Hugo noobs like myself. 

@@ -2,7 +2,6 @@
 title: "Simplifying Hugo Search (and adding Tags)"
 date: 2023-02-26T14:25:46-05:00
 tags: ["hugo", "project", "software"]
-draft: true
 ---
 
 This article picks up directly from [Implementing Search For Hugo with Lunr](/posts/implementing-search-for-hugo). That article was about getting search up and running quickly. This one will be about simplifying the implementation and adding a new feature altogether: article tags! 

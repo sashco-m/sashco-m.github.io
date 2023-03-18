@@ -2,7 +2,6 @@
 title: "Tech Interview Question: Balanced Brackets"
 date: 2022-10-10T10:44:22-04:00
 tags: ["interview", "leetcode", "software"]
-draft: true
 ---
 
 This is the first in a series of posts on technical questions I've been asked during interviews for software engineering internships. I've done dozens as part of UWaterloo's co-op system, and I'll be picking the most interesting to share with tips on solving them!
