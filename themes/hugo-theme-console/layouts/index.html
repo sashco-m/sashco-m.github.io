@@ -2,13 +2,14 @@
 
 <h1>About</h1>
 
-<p>
-Hello! I'm Sashco, and this site is in progress! <a href="about/">(more)</a>
-</p>
-
-<br/>
+{{ with .Site.GetPage "/about" }}
+{{ .Summary }}
+<!-- <a href="about/">(more)</a> -->
+{{ end }}
 
 <!--
+<br/>
+
 {{ with .Site.GetPage "/work" }}
     {{ range first 1 (sort .Data.Pages ".Params.endDate" "desc" (where .Pages ".Params.private" "!=" true))}}
         {{ if eq true .Params.current}}
