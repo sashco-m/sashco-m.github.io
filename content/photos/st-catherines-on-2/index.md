@@ -5,4 +5,4 @@ type: "gallery"
 image: "st-catherines-on-2.jpg"
 ---
 
-Here's part of the rope we had to climb to get the photo of the [falls](/photos/st-catherines-on). It was an adventure!
+Here's part of the rope we had to climb to get the photo of the [falls](/photos/st-catherines-on).

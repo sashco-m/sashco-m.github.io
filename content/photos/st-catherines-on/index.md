@@ -5,8 +5,7 @@ type: "gallery"
 image: "st-catherines-on.jpg"
 ---
 
-This photo has a fun story behind it. My girlfriend and I were exploring waterfalls in the St Catherines area during a trip in August 2022. One of those was [Decew Falls](https://www.alltrails.com/trail/canada/ontario/decew-falls-loop). The trail wound around the top of the falls and our view was mostly blocked by the trees.
+[Decew Falls](https://www.alltrails.com/trail/canada/ontario/decew-falls-loop).
 
-We began to hear voices coming from the base of the falls, and we wanted to investigate. However, there was no obvious path down. As we were about to give up, I found [this blog](https://ivebeenbit.ca/niagara-decew-falls-ontario/) from a fellow waterfall enthusiast. She explained that supposedly along the trail there is a rope that you can climb down to reach the base. Sure enough, we found the rope and carefully rappelled down to take this wonderful photo.,
-
-I've included a picture of part of the [rope](/photos/st-catherines-on-2) as well.
+There's a 'secret' path down the slopes that take you to the base of the falls. I only learned about it from [this blog](https://ivebeenbit.ca/niagara-decew-falls-ontario/), I wouldn't of found it otherwise.
+I've included a picture of the [rope](/photos/st-catherines-on-2) that you have to climb down to get here.
