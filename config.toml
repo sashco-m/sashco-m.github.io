@@ -1,4 +1,4 @@
-baseURL = 'https://sashco-m.github.io'
+baseURL = 'https://mistelbacher.ca/'
 languageCode = 'en-us'
 title = 'sashco'
 theme = "hugo-theme-console"
