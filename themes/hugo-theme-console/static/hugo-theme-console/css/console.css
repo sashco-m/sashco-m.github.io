@@ -192,6 +192,10 @@ figure {
     flex-wrap: wrap;
 }
 
+.image-wrapper {
+    height: 100%;
+}
+
 .terminal-prompt::after {
     -webkit-animation: cursor 1s infinite;
     animation: cursor 1s infinite;

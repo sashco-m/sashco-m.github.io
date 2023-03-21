@@ -78,7 +78,7 @@
 <div class="image-grid">
 {{ with .Site.GetPage "/photos" }}
     {{ range first 3 (sort .Data.Pages "Date" "desc")}}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
+        <a class="image-wrapper" href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
             {{ $thumb := .Fit "400x400" }}
