@@ -268,6 +268,10 @@ figure {
     .post h1, .post h2 {
         padding-top: 0;
     }
+    
+    .image-in-grid {
+        max-width: 200px;
+    }
 
     .posts-list .date {
         display: inline-block;

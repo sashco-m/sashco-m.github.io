@@ -8,7 +8,7 @@
             {{ $image := .Page.Resources.GetMatch .Params.image }}
             {{ with $image }}
                 {{ $thumb := .Fit "400x400" }}
-                <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
+                <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive image-in-grid">
             {{end}}
             </a>
         {{ end }}
