@@ -73,7 +73,7 @@
 </div>
     {{ $morePages := sub (len .Data.Pages) 3}}
     {{ if gt $morePages 0}}
-        <a href="/posts"> <b>({{ $morePages }}) more post{{ if gt morePages 1}}s{{ end }}</b></a>
+        <a href="/posts"> <b>({{ $morePages }}) more post{{ if gt $morePages 1}}s{{ end }}</b></a>
     {{ end }}
 {{ end }}
 
