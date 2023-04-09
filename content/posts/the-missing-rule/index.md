@@ -2,7 +2,6 @@
 title: "How to Win Friends and Influence People: the Missing Rule"
 date: 2023-04-09T11:39:26-04:00
 tags: ["books","life"]
-draft: true
 ---
 
 A mentor at work suggested that I read this book. It's touted as '*the only book you need to lead you to success*'. Now that I know all of the rules, I think there is one more hidden in plain sight that is crucial to being an effective communicator.  
