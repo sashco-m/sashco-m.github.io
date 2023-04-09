@@ -6,7 +6,7 @@ tags: ["books","life"]
 
 A mentor at work suggested that I read this book. It's touted as '*the only book you need to lead you to success*'. Now that I know all of the rules, I think there is one more hidden in plain sight that is crucial to being an effective communicator.  
 
-<!-- more -->
+<!--more-->
 
 ## The missing rule
 Let me introduce it with a story. In January of last year, I was looking for my second internship. I applied to a company called TrendMicro, and during my interview I was asked a fairly standard question about what sets me apart from other candidates. I hadn't answered anything like that before, so I nervously went with my gut. I said 'Uh, what about a story. Can I tell you a story?'. The story itself isn't important. It was meant to show passion and dedication, with that being what sets me apart. In all honestly, I probably did a poor job telling it.
