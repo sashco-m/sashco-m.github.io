@@ -70,8 +70,12 @@
             </p>
         </div>    
     {{ end }}
-{{ end }}
 </div>
+    {{ $morePages := sub (len .Data.Pages) 3}}
+    {{ if gt $morePages 0}}
+        <a href="/posts"> <b>({{ $morePages }}) more posts</b></a>
+    {{ end }}
+{{ end }}
 
 <h1>Latest photos</h1>
 
