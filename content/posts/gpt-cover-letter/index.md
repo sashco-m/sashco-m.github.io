@@ -1,5 +1,5 @@
 ---
-title: "Outsource your brain to ChatGPT: Cover Letter"
+title: "Outsource your brain to ChatGPT"
 date: 2023-03-20T23:24:37-04:00
 tags: ["career", "software", "AI"]
 draft: true
