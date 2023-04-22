@@ -3,8 +3,7 @@ title: "About"
 date: 2022-06-05T21:14:45-04:00
 ---
 
-[Hey](https://zombo.com/)! I'm Sashco. With my new revamped website I'm going to be documenting my journey in tech.
-Find me on [LinkedIn](https://www.linkedin.com/in/sashco-mistelbacher/) and [Github](https://github.com/sashco-m). The man may keep me down, but all opinions are [my own](https://workology.com/5-twitter-bio-disclaimers-social-media/).
+[Hey](https://zombo.com/)! I'm Sashco. Find me on [LinkedIn](https://www.linkedin.com/in/sashco-mistelbacher/) and [Github](https://github.com/sashco-m).
 
 Some quick facts about me:
 - I'm currently working as a full-stack developer at [Top Hat](https://tophat.com/)
@@ -12,4 +11,4 @@ Some quick facts about me:
 
 <!--more-->
 
-Wow, an opportunity to write all about myself! Who doesn't love doing that? Me. It's boring! :relaxed:
+Wow, an opportunity to write all about myself! Who doesn't love doing that?
