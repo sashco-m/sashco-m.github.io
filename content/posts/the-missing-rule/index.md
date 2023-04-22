@@ -9,7 +9,7 @@ tags: ["books","life"]
 <!--more-->
 
 ## The missing rule
-Let me introduce it with a story. In January of last year, I was applying for internships. During my interview I was asked a fairly standard question about what sets me apart from other candidates. I hadn't answered anything like that before, so I nervously went with my gut. I said 'Uh, what about a story. Can I tell you a story?'. The story itself isn't important. In all honestly, I probably did a poor job telling it.
+Let me introduce it with a story. In January of last year, I was applying for internships. During one interview I was asked a fairly standard question about what sets me apart from other candidates. I hadn't answered anything like that before, so I nervously went with my gut. I said 'Uh, what about a story. Can I tell you a story?'. The story itself isn't important. In all honestly, I probably did a poor job telling it.
 
 However, after hearing my story, the interviewer said this to me: 'I don't know if you did this intentionally or not, but what you just did there is one of the most powerful methods of human communication'.
 
