@@ -2,7 +2,6 @@
 title: "Outsource your brain to ChatGPT"
 date: 2023-03-20T23:24:37-04:00
 tags: ["career", "software", "AI"]
-draft: true
 ---
 
 I'm late to the party on this one. Everyone's tried to use these AI chatbots to automate some annoying aspect of their lives. A prime example of this is the dreaded [cover letter](https://www.hubspot.com/careers-blog/the-secret-to-the-perfect-cover-letter-dont-write-one). I ran across an internship posting that required one, and instead of skipping it like I usually do, I was curious if GPT could lend me hand. 
