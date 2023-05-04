@@ -31,12 +31,7 @@
 }
 
 .search-input {
-  border-width: 0;
-  padding: 0;
-  margin: 0;
-  width: 0;
-  outline: none;
-  background: transparent;
+  padding: 0em 0.5em !important;
   transition: width 0.5s;
 }
 
