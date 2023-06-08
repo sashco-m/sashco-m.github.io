@@ -1,5 +1,5 @@
 ---
-title: "SpinOk Android Spyware"
+title: "SpinOk Android Spyware found in 101 apps with 421 million downloads"
 date: 2023-06-08T19:04:59-04:00
 tags: ["software", "security"]
 ---
