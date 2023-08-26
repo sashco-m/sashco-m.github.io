@@ -1,7 +1,7 @@
 ---
 title: "Project Breakdown: faceit-enhancer-enhancer"
 date: 2023-08-26T13:49:15-04:00
-tags: ['project', 'software', 'chrome extension']
+tags: ['project', 'software', 'breakdown']
 ---
 
 I'm getting towards the end of my [chrome extension](https://chrome.google.com/webstore/detail/faceit-enhancer-enhancer/ljillbdcdanficginhgeioleejhdgjem) project. It uses the faceit data api to provide more detailed stats about the players in your lobby. There were interesting challenges at every turn, like scraping the dynamically-changing SPA or storing settings. I plan to give an overview of the design and insight into some of these hurdles.
