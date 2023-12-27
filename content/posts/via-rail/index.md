@@ -21,6 +21,6 @@ Or at least, that's what I thought I saw. That was actually the price 1-way. So,
 
 It's a shame. The average person is just going to rent a car and call it a day. I'm not sure what the solution is, but I'd like to see the more environmentally-friendly option be incentivized. Maybe it has to do with a lack of competition. As well, I'm sure it doesn't help that Via [doesn't own 97%](https://en.wikipedia.org/wiki/Via_Rail) of the track it uses.
 
-Some time later, I realized that "adult" tickets are for 26 and up. Choosing "youth" tickets (13-26) brought the total price down to $470. That's not fun, but fine, I'll take it.
+Some time later, I realized that "adult" tickets are for 26 and up. Choosing "youth" tickets (12-25) brought the total price down to $470. That's not fun, but fine, I'll take it.
 
 A Toronto-Montreal train will never be the quickest option (we don't have high-speed rail). It won't be the most comfortable option either (you do have to share the train). It could compete on convenience. I'm sure people would love to hear that they don't have to worry about gas, parking or traffic. But in my opinion, it has to compete on price to get lots of people to use it. This is a shift I'd love to see, but I know it's unlikely to happen any time soon.
