@@ -16,7 +16,7 @@ pygmentsStyle = "dracula"
   
   [[params.navlinks]]
   name = "resume/"
-  url = "https://sashcoresumebucket.s3.us-east-2.amazonaws.com/mistelbacher_resume.pdf"
+  url = "mistelbacher_resume.pdf"
 
   [[params.navlinks]]
   name = "posts/"
