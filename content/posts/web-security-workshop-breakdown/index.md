@@ -4,7 +4,7 @@ date: 2024-04-25T15:33:15Z
 tags: ['project', 'software', 'breakdown', 'university']
 ---
 
-I took a technical writing course (ENGL 210E) this term. For the final project, I made a hands-on tutorial on the basics of web vulnerabilities. I've put together some of the interesting problems I faced during development of this [Web Security Workshop](https://sashco.pythonanywhere.com).
+I took a technical writing course (ENGL 210E) this term. For the final project, I made a hands-on tutorial on the basics of SQL injection attacks and how to prevent them. I've put together some of the interesting problems I faced during development of this [Web Security Workshop](https://sashco.pythonanywhere.com).
 
 <!--more-->
 
