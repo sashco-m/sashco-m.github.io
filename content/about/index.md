@@ -7,6 +7,6 @@ date: 2022-06-05T21:14:45-04:00
 
 Some quick facts about me:
 - I graduated in May 2025 from the  [University of Waterloo](https://uwaterloo.ca/) with my bachelor of computer science
-- I'm working full-time at Federato building an AI-focused insurance SaaS
+- I'm working full-time at [Federato](https://www.federato.ai/) building an AI-focused insurance SaaS
 
 <!--more-->
