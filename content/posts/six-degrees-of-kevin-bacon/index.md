@@ -4,7 +4,7 @@ date: 2025-06-14T02:15:00-04:00
 tags: ['project', 'software']
 ---
 
-I've always found it fun to explore the connections between things. I decided to build a simple graph exploring site, [imdb.mistelbacher.ca](https://imdb.mistelbacher.ca), so that I could spend a couple hours clicking on actors (and maybe learn a thing or two about development in 2025).
+I've always found it fun to explore the connections between things. I decided to build a simple graph exploring site, [imdb.sashco.ca](https://imdb.sashco.ca), so that I could spend a couple hours clicking on actors (and maybe learn a thing or two about development in 2025).
 
 <!--more-->
 
