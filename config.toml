@@ -15,10 +15,6 @@ pygmentsStyle = "dracula"
   animateStyle = "animated zoomIn fast" 
   
   [[params.navlinks]]
-  name = "resume/"
-  url = "mistelbacher_resume.pdf"
-
-  [[params.navlinks]]
   name = "posts/"
   url = "posts/"
   
